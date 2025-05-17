@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Premium Interactive Restaurant Menu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom scrollbar for menu content */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #bfa24b;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #2c2f38;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+  <div class="max-w-5xl mx-auto p-6">
+    <header class="text-center mb-10">
+      <h1 class="text-5xl font-bold text-yellow-400 tracking-wide drop-shadow-lg mb-1">The Grand Feast</h1>
+      <p class="text-lg text-gray-300 italic">Scan. Explore. Order. 🍽️</p>
+    </header>
+
+    <!-- Recommended Section -->
+    <section class="mb-10 bg-gradient-to-r from-yellow-600 to-yellow-400 rounded-lg p-6 shadow-lg text-gray-900">
+      <h2 class="text-3xl font-semibold mb-5 border-b-2 border-gray-700 pb-2">Recommended</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="https://images.immediate.co.uk/production/volatile/sites/30/2021/02/butter-chicken-ac2ff98.jpg" alt="Butter Chicken" class="w-full h-40 object-cover" />
+          <div class="p-4">
+            <h3 class="text-xl font-bold mb-1">Butter Chicken</h3>
+            <p class="text-sm text-gray-700">₹280 · ⏱️ 20 min</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYcBOBp45CeyEUDGcx3iQo32afWes9UqtgoA&s" alt="Paneer Tikka" class="w-full h-40 object-cover" />
+          <div class="p-4">
+            <h3 class="text-xl font-bold mb-1">Paneer Tikka</h3>
+            <p class="text-sm text-gray-700">₹180 · ⏱️ 15 min</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="https://mytastycurry.com/wp-content/uploads/2020/04/Cafe-style-cold-coffee-with-icecream.jpg" alt="Cold Coffee" class="w-full h-40 object-cover" />
+          <div class="p-4">
+            <h3 class="text-xl font-bold mb-1">Cold Coffee</h3>
+            <p class="text-sm text-gray-700">₹100 · ⏱️ 4 min</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <nav class="flex flex-wrap justify-center gap-x-6 gap-y-4 mb-8 text-yellow-400 font-semibold text-lg cursor-pointer select-none">
+  <button class="menu-tab min-w-[120px] px-4 py-2 border-b-4 border-yellow-400" data-target="starters">Starters</button>
+  <button class="menu-tab min-w-[120px] px-4 py-2 border-b-4 border-transparent hover:border-yellow-400" data-target="main-course">Main Course</button>
+  <button class="menu-tab min-w-[120px] px-4 py-2 border-b-4 border-transparent hover:border-yellow-400" data-target="desserts">Desserts</button>
+  <button class="menu-tab min-w-[120px] px-4 py-2 border-b-4 border-transparent hover:border-yellow-400" data-target="beverages">Beverages</button>
+</nav>
+
+
+    <!-- Menu Sections -->
+    <section id="starters" class="menu-section grid md:grid-cols-3 gap-6 mb-12">
+      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-yellow-400/70 transition duration-300 cursor-pointer">
+        <img src="https://d1mxd7n691o8sz.cloudfront.net/static/recipe/recipe/2023-12/Vegetable-Spring-Rolls-2-1-906001560ca545c8bc72baf473f230b4_thumbnail_170.jpeg" alt="Veg Spring Rolls" class="w-full h-40 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-1 text-yellow-400">Veg Spring Rolls</h3>
+          <p class="text-gray-300 text-sm">₹120 · ⏱️ 10 min</p>
+        </div>
+      </div>
+      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-yellow-400/70 transition duration-300 cursor-pointer">
+        <img src="https://sinfullyspicy.com/wp-content/uploads/2023/12/1200-by-1200-images-1.jpg" alt="Manchow Soup" class="w-full h-40 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-1 text-yellow-400">Manchow Soup</h3>
+          <p class="text-gray-300 text-sm">₹100 · ⏱️ 12 min</p>
+        </div>
+      </div>
+      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-yellow-400/70 transition duration-300 cursor-pointer">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYcBOBp45CeyEUDGcx3iQo32afWes9UqtgoA&s" alt="Paneer Tikka" class="w-full h-40 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-1 text-yellow-400">Paneer Tikka</h3>
+          <p class="text-gray-300 text-sm">₹180 · ⏱️ 15 min</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="main-course" class="menu-section hidden grid md:grid-cols-3 gap-6 mb-12">
+      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-yellow-400/70 transition duration-300 cursor-pointer">
+        <img src="https://images.immediate.co.uk/production/volatile/sites/30/2021/02/butter-chicken-ac2ff98.jpg" alt="Butter Chicken" class="w-full h-40 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-1 text-yellow-400">Butter Chicken</h3>
+          <p class="text-gray-300 text-sm">₹280 · ⏱️ 20 min</p>
+        </div>
+      </div>
+      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-yellow-400/70 transition duration-300 cursor-pointer">
+        <img src="https://indianfoods.co.in/wp-content/uploads/2024/02/paneer-tikka-masa.jpg" alt="Paneer Tikka Masala" class="w-full h-40 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-1 text-yellow-400">Paneer Tikka Masala</h3>
+          <p class="text-gray-300 text-sm">₹240 · ⏱️ 18 min</p>
+        </div>
+      </div>
+      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-yellow-400/70 transition duration-300 cursor-pointer">
+        <img src="https://biryanibonanza.com/wp-content/uploads/2024/06/Rajma-Chawal-cover-image-2.jpg" alt="Rajma Chawal" class="w-full h-40 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-1 text-yellow-400">Rajma Chawal</h3>
+          <p class="text-gray-300 text-sm">₹150 · ⏱️ 15 min</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="desserts" class="menu-section hidden grid md:grid-cols-3 gap-6 mb-12">
+      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-yellow-400/70 transition duration-300 cursor-pointer">
+        <img src="https://images.immediate.co.uk/production/volatile/sites/30/2022/01/gulab-jamun-366a0e9.jpg" alt="Gulab Jamun" class="w-full h-40 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-1 text-yellow-400">Gulab Jamun</h3>
+          <p class="text-gray-300 text-sm">₹100 · ⏱️ 8 min</p>
+        </div>
+      </div>
+      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-yellow-400/70 transition duration-300 cursor-pointer">
+        <img src="https://www.cookwithmanali.com/wp-content/uploads/2021/07/Rasgulla-Recipe-1.jpg" alt="Rasgulla" class="w-full h-40 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-1 text-yellow-400">Rasgulla</h3>
+          <p class="text-gray-300 text-sm">₹110 · ⏱️ 10 min</p>
+        </div>
+      </div>
+      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-yellow-400/70 transition duration-300 cursor-pointer">
+        <img src="https://www.cookwithmanali.com/wp-content/uploads/2022/07/Mango-Ice-Cream-Recipe.jpg" alt="Mango Ice Cream" class="w-full h-40 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-1 text-yellow-400">Mango Ice Cream</h3>
+          <p class="text-gray-300 text-sm">₹130 · ⏱️ 5 min</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="beverages" class="menu-section hidden grid md:grid-cols-3 gap-6 mb-12">
+      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-yellow-400/70 transition duration-300 cursor-pointer">
+        <img src="https://mytastycurry.com/wp-content/uploads/2020/04/Cafe-style-cold-coffee-with-icecream.jpg" alt="Cold Coffee" class="w-full h-40 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-1 text-yellow-400">Cold Coffee</h3>
+          <p class="text-gray-300 text-sm">₹100 · ⏱️ 4 min</p>
+        </div>
+      </div>
+      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-yellow-400/70 transition duration-300 cursor-pointer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Glass_of_water.jpg/800px-Glass_of_water.jpg" alt="Fresh Water" class="w-full h-40 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-1 text-yellow-400">Fresh Water</h3>
+          <p class="text-gray-300 text-sm">₹30 · ⏱️ 1 min</p>
+        </div>
+      </div>
+      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-yellow-400/70 transition duration-300 cursor-pointer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Lemonade_glass_1.jpg" alt="Lemonade" class="w-full h-40 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-1 text-yellow-400">Lemonade</h3>
+          <p class="text-gray-300 text-sm">₹60 · ⏱️ 3 min</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    // Select all tab buttons and menu sections
+    const tabs = document.querySelectorAll('.menu-tab');
+    const sections = document.querySelectorAll('.menu-section');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove active class from all tabs
+        tabs.forEach(t => {
+          t.classList.remove('border-yellow-400');
+          t.classList.add('border-transparent');
+        });
+
+        // Add active class to clicked tab
+        tab.classList.add('border-yellow-400');
+        tab.classList.remove('border-transparent');
+
+        // Hide all menu sections
+        sections.forEach(section => section.classList.add('hidden'));
+
+        // Show the target menu section
+        const target = tab.getAttribute('data-target');
+        const activeSection = document.getElementById(target);
+        if (activeSection) {
+          activeSection.classList.remove('hidden');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
